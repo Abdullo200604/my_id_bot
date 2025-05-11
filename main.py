@@ -108,11 +108,14 @@ async def command_start_handler(message: Message) -> None:
 async def main() -> None:
     # 1-botni ishga tushirish
     bot_1 = Bot(token=TOKEN_1)
-    await dp_1.start_polling(bot_1)
+    task_1 = asyncio.create_task(dp_1.start_polling(bot_1))
 
     # 2-botni ishga tushirish
     bot_2 = Bot(token=TOKEN_2)
-    await dp_2.start_polling(bot_2)
+    task_2 = asyncio.create_task(dp_2.start_polling(bot_2))
+
+    # Barcha polling jarayonlarini kutish
+    await asyncio.gather(task_1, task_2)
 
 
 if __name__ == "__main__":
