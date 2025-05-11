@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-TOKEN = os.getenv("token")
+TOKEN = os.getenv("token1")
 ADMIN_ID = int(os.getenv("A_id"))
 
 dp = Dispatcher()
