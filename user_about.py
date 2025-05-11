@@ -1,10 +1,15 @@
 import asyncio
+from tokenize import Token
+
 from aiogram import Bot, Dispatcher
 from aiogram.filters import Command
 from aiogram.types import Message
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
-TOKEN = '8159987403:AAGrLtMU1jZ9y_qkU3Cv39D832o2e1DYim4'
-ADMIN_ID = 7346730386  # <-- BU YERGA ADMIN TELEGRAM ID sini yozing
+TOKEN = os.getenv("Token")
+ADMIN_ID = int(os.getenv("A_id"))  
 
 dp = Dispatcher()
 
