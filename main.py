@@ -142,7 +142,7 @@ async def stats_handler_1(message: Message):
         return await message.answer("❌ Bu buyruq faqat admin uchun.")
     
     await message.answer(
-        f"📊 <b>Creative Bot statistikasi:</b>\n"
+        f"📊 <b>Bot statistikasi:</b>\n"
         f"• 👥 Foydalanuvchilar soni: {len(bot_1_users)}",
         parse_mode="HTML"
     )
@@ -155,7 +155,7 @@ async def stats_handler_2(message: Message):
         return await message.answer("❌ Bu buyruq faqat admin uchun.")
     
     await message.answer(
-        f"📊 <b>2-Bot statistikasi:</b>\n"
+        f"📊 <b>Bot statistikasi:</b>\n"
         f"• 👥 Foydalanuvchilar soni: {len(bot_2_users)}",
         parse_mode="HTML"
     )
